@@ -6,9 +6,16 @@
   "scripts": {
     "start": "bun run src/index.ts",
     "benchmark": "bun run src/index.ts",
-    "plot": "uv run src/plot.py"
+    "benchmark:pg": "bun run src/index.ts",
+    "benchmark:mongo": "bun run src/mongo_index.ts",
+    "plot": "python3 src/plot.py",
+    "plot:pg": "python3 src/plot.py benchmark_results.json assets/benchmark_comparison.png",
+    "plot:mongo": "python3 src/plot.py benchmark_results_mongo.json assets/benchmark_comparison_mongo.png \"Comparación de Rendimiento MongoDB Antes y Después de Índices\""
   },
   "devDependencies": {
     "@types/bun": "latest"
+  },
+  "dependencies": {
+    "mongodb": "^7.7.0"
   }
 }

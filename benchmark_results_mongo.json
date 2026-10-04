@@ -1,0 +1,76 @@
+{
+  "baseline": {
+    "Q1": {
+      "avg": 48.833333333333336,
+      "std": 1.4034589305344745,
+      "node": "COLLSCAN",
+      "docsExamined": 100000,
+      "keysExamined": 0
+    },
+    "Q2": {
+      "avg": 35.333333333333336,
+      "std": 4.923659639173309,
+      "node": "COLLSCAN",
+      "docsExamined": 100000,
+      "keysExamined": 0
+    },
+    "Q3": {
+      "avg": 49.583333333333336,
+      "std": 2.843120351538663,
+      "node": "COLLSCAN",
+      "docsExamined": 100000,
+      "keysExamined": 0
+    },
+    "Q4": {
+      "avg": 36.833333333333336,
+      "std": 4.783177592227565,
+      "node": "COLLSCAN",
+      "docsExamined": 100000,
+      "keysExamined": 0
+    },
+    "Q5": {
+      "avg": 61.166666666666664,
+      "std": 5.507570547286102,
+      "node": "SORT",
+      "docsExamined": 100000,
+      "keysExamined": 0
+    }
+  },
+  "indexed": {
+    "Q1": {
+      "avg": 1.0837891666666668,
+      "std": 0.2885742084732621,
+      "node": "IXSCAN",
+      "docsExamined": 503,
+      "keysExamined": 503
+    },
+    "Q2": {
+      "avg": 0.6469215,
+      "std": 0.05680292679639284,
+      "node": "IXSCAN (Covered)",
+      "docsExamined": 0,
+      "keysExamined": 503
+    },
+    "Q3": {
+      "avg": 1.2022585833333335,
+      "std": 0.8815512890541267,
+      "node": "IXSCAN",
+      "docsExamined": 53,
+      "keysExamined": 53
+    },
+    "Q4": {
+      "avg": 0.5441912499999999,
+      "std": 0.057020314495043224,
+      "node": "IXSCAN (Covered)",
+      "docsExamined": 0,
+      "keysExamined": 0
+    },
+    "Q5": {
+      "avg": 0.4866999999999999,
+      "std": 0.07702606454370434,
+      "node": "IXSCAN",
+      "docsExamined": 0,
+      "keysExamined": 0
+    }
+  }
+}

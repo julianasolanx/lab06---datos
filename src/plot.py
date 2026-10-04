@@ -5,8 +5,14 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-# 1. Cargar los datos dinámicos generados por index.ts
-json_file = "benchmark_results.json"
+# 1. Cargar los datos dinámicos generados por el benchmark
+json_file = sys.argv[1] if len(sys.argv) > 1 else "benchmark_results.json"
+output_file = sys.argv[2] if len(sys.argv) > 2 else "assets/benchmark_comparison.png"
+title = (
+    sys.argv[3]
+    if len(sys.argv) > 3
+    else "Comparación de Tiempo de Ejecución Antes y Después de Índices"
+)
 
 try:
     with open(json_file, "r") as f:
@@ -49,20 +55,16 @@ rects2 = ax.bar(
 )
 
 # 3. Escala y ejes con números reales
-max_val = max(sin_indices)
-y_max = math.ceil(max_val + 2)
+max_val = max(sin_indices) if sin_indices else 10
+y_max = math.ceil(max_val + (2 if max_val < 15 else 5))
 ax.set_ylim(0, y_max)
-step = 2 if y_max <= 12 else 4
+step = 2 if y_max <= 12 else (5 if y_max <= 30 else 10)
 y_ticks = list(range(0, y_max + 1, step))
 ax.set_yticks(y_ticks)
 ax.set_yticklabels([f"{t} ms" for t in y_ticks], fontsize=10)
 
 ax.set_ylabel("Tiempo de Ejecución (ms)", fontsize=11, fontweight="bold")
-ax.set_title(
-    "Comparación de Tiempo de Ejecución Antes y Después de Índices",
-    fontsize=12,
-    fontweight="bold",
-)
+ax.set_title(title, fontsize=12, fontweight="bold")
 ax.set_xticks(x)
 ax.set_xticklabels(queries, fontsize=11, fontweight="bold")
 ax.legend(fontsize=10, loc="upper left")
@@ -100,6 +102,6 @@ for rect in rects2:
 
 # 5. Guardar únicamente en PNG
 plt.tight_layout()
-plt.savefig("assets/benchmark_comparison.png", dpi=300)
+plt.savefig(output_file, dpi=300)
 plt.close()
-print("✓ Gráfica simple generada en assets/benchmark_comparison.png")
+print(f"✓ Gráfica simple generada en {output_file}")
