@@ -1,0 +1,14 @@
+{
+  "name": "lab-6",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "benchmark": "bun run src/index.ts",
+    "plot": "uv run src/plot.py"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
