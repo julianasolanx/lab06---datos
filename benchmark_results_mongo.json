@@ -1,36 +1,36 @@
 {
   "baseline": {
     "Q1": {
-      "avg": 48.833333333333336,
-      "std": 1.4034589305344745,
+      "avg": 51.583333333333336,
+      "std": 5.177895910561167,
       "node": "COLLSCAN",
       "docsExamined": 100000,
       "keysExamined": 0
     },
     "Q2": {
-      "avg": 35.333333333333336,
-      "std": 4.923659639173309,
+      "avg": 34.416666666666664,
+      "std": 2.9987371079213068,
       "node": "COLLSCAN",
       "docsExamined": 100000,
       "keysExamined": 0
     },
     "Q3": {
-      "avg": 49.583333333333336,
-      "std": 2.843120351538663,
+      "avg": 53.75,
+      "std": 8.378815277504657,
       "node": "COLLSCAN",
       "docsExamined": 100000,
       "keysExamined": 0
     },
     "Q4": {
-      "avg": 36.833333333333336,
-      "std": 4.783177592227565,
+      "avg": 38.333333333333336,
+      "std": 3.7739136506316946,
       "node": "COLLSCAN",
       "docsExamined": 100000,
       "keysExamined": 0
     },
     "Q5": {
-      "avg": 61.166666666666664,
-      "std": 5.507570547286102,
+      "avg": 62.75,
+      "std": 4.309081319513687,
       "node": "SORT",
       "docsExamined": 100000,
       "keysExamined": 0
@@ -38,36 +38,36 @@
   },
   "indexed": {
     "Q1": {
-      "avg": 1.0837891666666668,
-      "std": 0.2885742084732621,
+      "avg": 0.9976386666666667,
+      "std": 0.008179898613878626,
       "node": "IXSCAN",
       "docsExamined": 503,
       "keysExamined": 503
     },
     "Q2": {
-      "avg": 0.6469215,
-      "std": 0.05680292679639284,
+      "avg": 0.6532325,
+      "std": 0.0783181879694505,
       "node": "IXSCAN (Covered)",
       "docsExamined": 0,
       "keysExamined": 503
     },
     "Q3": {
-      "avg": 1.2022585833333335,
-      "std": 0.8815512890541267,
+      "avg": 1.2242054166666667,
+      "std": 0.8751225159679545,
       "node": "IXSCAN",
       "docsExamined": 53,
       "keysExamined": 53
     },
     "Q4": {
-      "avg": 0.5441912499999999,
-      "std": 0.057020314495043224,
+      "avg": 0.5755310833333335,
+      "std": 0.0786498307117849,
       "node": "IXSCAN (Covered)",
       "docsExamined": 0,
       "keysExamined": 0
     },
     "Q5": {
-      "avg": 0.4866999999999999,
-      "std": 0.07702606454370434,
+      "avg": 0.7020807499999999,
+      "std": 0.13023442243970887,
       "node": "IXSCAN",
       "docsExamined": 0,
       "keysExamined": 0
