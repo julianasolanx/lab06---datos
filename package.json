@@ -1,0 +1,23 @@
+{
+  "name": "lab-6",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "benchmark": "bun run src/index.ts",
+    "benchmark:pg": "bun run src/index.ts",
+    "benchmark:mongo": "bun run src/mongo_index.ts",
+    "seed:mongo": "bun run src/seed_mongo.ts",
+    "seed:mongo:pg": "bun run src/seed_mongo.ts --from-pg",
+    "plot": "python3 src/plot.py",
+    "plot:pg": "python3 src/plot.py benchmark_results.json assets/benchmark_comparison.png",
+    "plot:mongo": "python3 src/plot.py benchmark_results_mongo.json assets/benchmark_comparison_mongo.png \"Comparación de Rendimiento MongoDB Antes y Después de Índices\""
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "mongodb": "^7.7.0"
+  }
+}
